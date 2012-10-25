@@ -1,0 +1,191 @@
+/************************表格*************************************************/
+#scrollTable table {
+	font: 12px 'arial';
+    border-collapse:collapse; /*统一设置两个table为细线表格*/
+}
+/*表头 div的第一个子元素, 定义头部栏的高度**/
+#scrollTable table.thead{ 
+    width:100%;
+    height: 26px;
+}
+/*能带滚动条的表身*/
+/*div的第二个子元素 定义page的高度为40px*/
+#content{
+    width:100%;
+    position: absolute;
+/*    top: 39px;*/
+    top: 26px;
+    bottom: 40px;
+    overflow:auto;/*必需*/
+    overflow-x: hidden;
+}
+/*能带滚动条的表身的正体*/
+#scrollTable table.tbody{
+    width:100%;
+    border-right:#B74;
+    background: #ECE9D8;
+}
+/*能带滚动条的表身的格子*/
+#scrollTable table.tbody td{
+    text-align: center;
+    font-family: Arial;
+    border-bottom: 1px solid #98b267;
+}
+ 
+/**定义单双行样式**/
+tr.alternateRow td{
+    background: #bdcf95;
+/*    border-right: 1px solid #DDD;*/
+}
+
+tr.normalRow td {
+    background: #e1ecc8;
+/*    border-right: 1px solid #DDD;*/
+} 
+
+/*选中行样式*/
+tr.trselect td{
+    background: #f3d19a !important ;
+    border-bottom: 1px solid #9f4100 !important;
+}
+
+.thead th{
+    border-right: 2px groove #d3e0c2;
+    color: #fff;
+    font-weight: normal;
+    background: url(images/home_table_thBG.png) !important;
+}
+
+.table_middle{
+    background: url(images/table_middle.png);
+    width: 12px;
+    float: left;
+    line-height: 39px;
+    height: 39px;        
+}
+
+.table_line{
+    background: url(images/skin1/table_line.png);
+    width: 2px;
+    float: left;
+    height: 37px;            
+}
+
+.chexkbox{
+    
+}
+
+.currentPage{
+    padding: 0 5px 0 5px;
+    border: 1px solid #9AAFE5;
+    height: 27px;
+    line-height: 27px;
+    margin: 6px 1px 0 1px;
+    background-color: #2E6AB1;
+    color: #fff;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.pagePrv{
+    float: left;
+    cursor: pointer;
+    height: 27px;
+    line-height: 27px;
+    margin: 6px 1px 0 1px;
+    border: 1px solid #9AAFE5;    
+    padding: 0 5px 0 5px;        
+}
+
+.pageNext{
+    float: left;
+    cursor: pointer;
+    height: 27px;
+    line-height: 27px;
+    margin: 6px 1px 0 1px;
+    border: 1px solid #9AAFE5;    
+    padding: 0 5px 0 5px;            
+}
+
+#page{
+	font: 12px 'arial';
+    position: absolute;
+    bottom: 0px;
+    height: 40px;
+    line-height: 40px;
+    left: 0px;
+    right: 0px;   
+    border-top: 1px solid #BDCF95;
+    background: #ebf5de;
+}
+
+#page .pageItem{
+    width: 45px;
+    float: left;
+    cursor: pointer;
+}
+
+#page .pageItem_n{   
+    padding: 0 5px 0 5px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    height: 27px;
+    line-height: 27px;
+    margin-top: 6px;
+    margin-left: 1px;
+    margin-right: 1px;
+    border: 1px solid #9AAFE5;   
+}
+
+#page .pageItem_dots{
+    padding: 0 5px 0 5px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    
+    height: 27px;
+    line-height: 27px;
+    margin-top: 6px;
+    font-weight: bold;
+    margin-left: 1px;
+    margin-right: 1px;      
+}
+
+#page .pageItem_jump{
+    width: 125px;
+    float: left;
+    text-align: center;
+    cursor: pointer;    
+}
+.pageItem_jump input{
+    width: 30px;
+    background-color: #fff;
+}
+
+#go_button{
+    width: 28px;
+    height: 29px;
+    line-height: 29px;
+    float: right;
+    margin-top: 5px;
+    background: url(images/go_button.png);
+}
+
+#go_button:hover{
+    background: url(images/go_button_hover.png);
+}
+
+#scrollTable td{
+    height: 23px !important;
+}
+
+.jump{
+    float: right;
+}
+.page{
+    float: right;
+}
+

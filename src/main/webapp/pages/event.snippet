@@ -1,0 +1,36 @@
+<!--</div>-->
+<div class='gridContainer'>
+
+</div>
+<!--<div id='info'> -->
+<div id="info">
+<p>
+        引入 jquery.hdgrid.js 。 引入 mygrid.css。 <br>
+        简单配置如下：<br>
+        <code>
+                $(".gridContainer").hdgrid({<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url: 'testData.txt',<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showColNum: true,<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checkBox: false,<br>  
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showPage: true,<br>  
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autoLoad: true,<br>  
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rowclick: rowclick,<br>  
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rowdblclick: rowdblclick,<br>  				
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;colModel: [{name: 'col1', header: '列一',} ,{name: 'col2', header: '列二', sortable: true} ,<br> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'col3', header: '列三'},{name: 'col4', header: '列四'},<br> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'col5', header: '列五'},{name: 'col6', header: '列六',<br> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hidden: false},{name: 'col7', header: '列七'}]<br>  
+                });<br>  
+        </code>
+        <br>
+        <code>rowclick</code>: function 行单击的回调函数 参数为当前行的数据Object<br> 
+        <code>rowdblclick</code>: function 行双击的回调函数 参数为当前行的数据Object<br> 
+</p>
+<p>
+        例子如下: <br><code>
+                var rowClick = function(rData){<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert("click row col1 = " + rData.col1);<br>
+                }	<br>
+        </code>
+</p>
+</div>

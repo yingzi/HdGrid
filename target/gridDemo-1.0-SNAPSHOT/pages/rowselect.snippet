@@ -1,0 +1,20 @@
+<div class='gridContainer'>
+
+</div>
+<!--<div id='info'> -->
+<div id="info">
+<p>
+        <button class="btn btn-primary" id="getsrows">得到选中行</button>
+        <button class="btn" id="selectrows">选中company等于company1的行</button><br>
+        <code>
+        $("#getsrows").click(function(){<br> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert("select " + $(".gridContainer").getSelectRow().length  + " rows");<br> 
+        })<br> 
+
+        $("#selectrows").click(function(){<br> 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(".gridContainer").selectRows([{name:'col1', value: '1'}]);<br> 
+        })<br> 
+        </code>
+        <br>
+</p>
+</div>

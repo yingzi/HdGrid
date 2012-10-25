@@ -1,0 +1,41 @@
+<div class='gridContainer'>
+
+</div>
+
+<div id="info">
+    <p>
+        引入 jquery.hdgrid.js 。 引入 mygrid.css。 <br>
+        简单配置如下：<br>
+        <code>
+            $(".gridContainer").hdgrid({<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url: 'testData.txt',<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showColNum: true,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;checkBox: false,<br>  
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;showPage: true,<br>  
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;autoLoad: true,<br>  
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;colModel: [{name: 'col1', header: '列一',} ,{name: 'col2', header: '列二', sortable: true} ,<br> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'col3', header: '列三'},{name: 'col4', header: '列四'},<br> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'col5', header: '列五'},{name: 'col6', header: '列六',<br> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hidden: false},{name: 'col7', header: '列七'}]<br>  
+            });<br>  
+        </code>
+        <br>
+        <code>url</code>: 请求数据的路径 <br> 
+        <code>showColNum</code>: (true/false)是否显示行号<br> 
+        <code>checkBox</code>: (true/false)是否多选<br> 
+        <code>showPage</code>: (true/false)是否显示分页项 <br>
+        <code>autoLoad:</code> (true/false)是否自动加载 
+    </p>
+    <p>
+        只支持json格式的数据 如: <br><code>
+            {"pageNo":"1","pageCount": 15,"pageSize":"20","result":[<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"col1":"1","col2":"设备1","col3":"RTU","col4":"1","col5":"火星","col6":"v1", "col7":"com1"},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"col1":"1","col2":"设备1","col3":"RTU","col4":"1","col5":"火星","col6":"v1", "col7":"com1"},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"col1":"1","col2":"设备1","col3":"RTU","col4":"1","col5":"火星","col6":"v1", "col7":"com1"},<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"col1":"1","col2":"设备1","col3":"RTU","col4":"1","col5":"火星","col6":"v1", "col7":"com1"}<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>
+            }<br>
+        </code>
+        pageNo: 当前页码    pageCount: 总页数  pageSize：每页的记录数  result: 记录
+    </p>
+</div>
